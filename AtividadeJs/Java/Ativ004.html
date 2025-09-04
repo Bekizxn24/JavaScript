@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 4</title>
+</head>
+<body>
+    <button onclick="inicio()">Aqui</button>
+    <script>
+        function inicio(){
+            let produto = window.prompt('Qual o nome do produto?');
+            let preço = window.prompt('Qual o preço do produto?');
+            let pago = window.prompt('Quanto você pagou?');
+            let troco = pago - preço
+             window.alert('Você pagou R$ ${pago}, então seu troco vai ser ${troco}');
+        }
+    </script>
+    
+</body>
+</html>

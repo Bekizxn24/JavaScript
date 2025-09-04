@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Atividade 02 - Boas-Vindas</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, rgb(87, 217, 243), #7df4ce);
+      color: black;
+      text-align: center;
+      padding: 50px;
+    }
+    h1 {
+      margin-bottom: 20px;
+    }
+    button {
+      background: #fff;
+      color: #333;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 25px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover {
+      background: #ddd;
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+  <h1>Bem-vindo à Página de Início</h1>
+  <p>Clique no botão abaixo para se apresentar</p>
+  <button onclick="boasVindas()">Entrar</button>
+
+  <script>
+    function boasVindas() {
+      let nome = prompt("Qual é o seu nome?");
+      if (nome) {
+        let idade = prompt(`Olá, ${nome}! Quantos anos você tem?`);
+        if (idade) {
+          alert(`Que maravilha! ${nome} tem ${idade} anos!`);
+        }
+      }
+    }
+  </script>
+</body>
+</html>

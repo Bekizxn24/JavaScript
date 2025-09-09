@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Verificador de Idade</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, rgb(8, 167, 151), #cb3d97);
+      color: black;
+      text-align: center;
+      padding: 50px;
+    }
+    input, button {
+      font-size:20px;
+      padding: 10px;
+    }
+    #mensagem {
+      margin-top: 20px;
+      font-size: 1px;
+      color: #444;
+    }
+     button:hover {
+      background: #099e29;
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Informe sua idade</h2>
+  <input type="number" id="idade" placeholder="Digite sua idade" />
+  <button onclick="verificarIdade()">Verificar</button>
+
+  <div id="mensagem"></div>
+
+  <script>
+    function verificarIdade() {
+      const idade = parseInt(document.getElementById('idade').value);
+      const mensagem = document.getElementById('mensagem');
+
+      if (isNaN(idade) || idade < 0) {
+        mensagem.textContent = "Por favor, insira uma idade válida.";
+        mensagem.style.color = 'red';
+      } else if (idade >= 18) {
+        mensagem.textContent = "Você é maior de idade.";
+        mensagem.style.color = 'green';
+      } else {
+        mensagem.textContent = "Você é menor de idade.";
+        mensagem.style.color = 'red';
+      }
+    }
+  </script>
+
+</body>
+</html>

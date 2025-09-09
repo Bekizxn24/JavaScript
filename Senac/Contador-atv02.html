@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Contador de Cliques</title>
+  <style>
+     body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, rgb(98, 69, 243), #db0879);
+      color: black;
+      text-align: center;
+      padding: 50px;
+    }
+    button {
+      font-size: 20px;
+      padding: 10px 20px;
+      background-color: aqua;
+      background: #ee60f5;
+      color: #000000;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover {
+      background: #da47c4;
+      transform: scale(1.1);
+    }
+    #contador {
+      font-size: 24px;
+      margin-top: 20px;
+      color: #000000;
+    }
+  </style>
+</head>
+<body>
+
+  <button onclick="incrementarContador()">Clique aqui</button>
+  <div id="contador">Total de cliques: 0</div>
+
+  <script>
+    let totalCliques = 0;
+
+    function incrementarContador() {
+      totalCliques++;
+      document.getElementById('contador').textContent = `Total de cliques: ${totalCliques}`;
+    }
+  </script>
+
+</body>
+</html>
